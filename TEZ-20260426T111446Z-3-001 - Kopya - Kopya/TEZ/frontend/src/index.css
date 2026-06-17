@@ -1,0 +1,22 @@
+@import 'tailwindcss';
+@config '../tailwind.config.js';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+
+  body {
+    @apply min-h-screen bg-slate-50 text-slate-800;
+  }
+
+  html.dark body {
+    @apply bg-bg-dark text-slate-200;
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+}
